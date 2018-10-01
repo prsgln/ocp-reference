@@ -1,4 +1,4 @@
-###Cheat Sheet
+# Cheat Sheet
 
 ## Installing
   ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
