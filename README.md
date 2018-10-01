@@ -10,7 +10,7 @@
  Ctrl+a c	new window  
  Ctrl+a n	next window   
  Ctrl+a p	previous window	 
- Ctrl+a "	select window from list   
+ Ctrl+a \"	select window from list  
  Ctrl+a Ctrl+a	previous window viewed  
  Ctrl+a S	split terminal horizontally into regions  
  Ctrl+a |	split terminal vertically into regions   
