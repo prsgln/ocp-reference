@@ -33,7 +33,7 @@
  https://docs.google.com/document/d/1sQaWQmBnbxsW6mgNsAoaXErGvRUo9hG-nV_Q5DeUMYc/edit?invite=CLrjxpoG&ts=5bb217ef#heading=h.7lrt9bp4q74y     
 
 ## Jourald Logs
- journalctl --since "1 hour ago" 
- journalctl -f  #it means follow
- journalctl -u sshd.service #it means unit  
+ journalctl --since "1 hour ago"     
+ journalctl -f  #it means follow   
+ journalctl -u sshd.service #it means unit    
 
