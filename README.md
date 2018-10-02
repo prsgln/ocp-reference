@@ -30,4 +30,4 @@
  https://labs.opentlc.com/service/explorer  
  https://docs.openshift.com/container-platform/3.9/install_config/install/advanced_install.html  
  https://docs.openshift.com/container-platform/3.9/install_config/aggregate_logging.html#install-config-aggregate-logging  
- 
+ https://docs.google.com/document/d/1sQaWQmBnbxsW6mgNsAoaXErGvRUo9hG-nV_Q5DeUMYc/edit?invite=CLrjxpoG&ts=5bb217ef#heading=h.7lrt9bp4q74y     
