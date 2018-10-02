@@ -23,4 +23,9 @@
   ansible nodes -a "rm -rf /etc/origin"  
   ansible nfs -a "rm -rf /srv/nfs/*"   
 
+## Links
+ https://www.opentlc.com/labs/ocp_advanced_deployment/02_1_HA_Deployment_Lab.html#_uninstalling_openshift  
+ https://labs.opentlc.com/service/explorer  
+ https://docs.openshift.com/container-platform/3.9/install_config/install/advanced_install.html  
+ https://docs.openshift.com/container-platform/3.9/install_config/aggregate_logging.html#install-config-aggregate-logging  
  
