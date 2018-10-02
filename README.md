@@ -16,6 +16,7 @@
  Ctrl+a |	split terminal vertically into regions   
 
 ## Installing
+  ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml   
   ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
 ## Un-Installing
  
