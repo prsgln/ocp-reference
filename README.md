@@ -17,6 +17,7 @@
 
 ## Prepare Ansible
  see Preparing the hosts prerequisites https://docs.openshift.com/container-platform/3.10/install/host_preparation.html   
+ yum install atomic-openshift-utils <- it provides ansible playbooks   
 
 ## Installing
   ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml   
