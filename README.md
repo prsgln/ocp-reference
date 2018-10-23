@@ -17,11 +17,13 @@
 
 ## Prepare Ansible
  see Preparing the hosts prerequisites https://docs.openshift.com/container-platform/3.10/install/host_preparation.html   
+'''bash  
  yum install atomic-openshift-utils <- it provides ansible playbooks   
-
+'''
 ## Installing
   ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml   
   ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
+
 ## Un-Installing
  
   ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/adhoc/uninstall.yml  
@@ -36,13 +38,14 @@
   
 
 ## Links
+ https://training-lms.redhat.com/lmt
  https://www.opentlc.com/labs/ocp_advanced_deployment   
  https://labs.opentlc.com/service/explorer  
  https://docs.openshift.com/container-platform/3.9/install_config/install/advanced_install.html  
  https://docs.openshift.com/container-platform/3.9/install_config/aggregate_logging.html#install-config-aggregate-logging  
  https://docs.google.com/document/d/1sQaWQmBnbxsW6mgNsAoaXErGvRUo9hG-nV_Q5DeUMYc/edit?invite=CLrjxpoG&ts=5bb217ef#heading=h.7lrt9bp4q74y     
 
-## Jourald Logs
+## Journald Logs
  journalctl --since "1 hour ago"     
  journalctl -f  #it means follow   
  journalctl -u sshd.service #it means unit    
