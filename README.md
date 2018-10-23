@@ -21,24 +21,26 @@
  yum install atomic-openshift-utils <- it provides ansible playbooks   
 ```
 ## Installing
+  ```bash
   ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml   
   ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
-
+ ```
 ## Un-Installing
- 
+```bash
   ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/adhoc/uninstall.yml  
   ansible nodes -a "rm -rf /etc/origin"  
   ansible nfs -a "rm -rf /srv/nfs/<dirs>" <- specify the dirs like monitorings,loggings etc etc   
   ansible all -m ping  
-
+```
 ## Ansible others
+```bash
   ansible nfs -a "rm -rf /srv/nfs/*"  
   ansible masters[0] -b -m fetch -a "src=/root/.kube/config dest=/root/.kube/config flat=yes"  <- so to run from bastion oc command as system:admin    
-
+```
   
 
 ## Links
- https://training-lms.redhat.com/lmt
+ https://training-lms.redhat.com/lmt  
  https://www.opentlc.com/labs/ocp_advanced_deployment   
  https://labs.opentlc.com/service/explorer  
  https://docs.openshift.com/container-platform/3.9/install_config/install/advanced_install.html  
