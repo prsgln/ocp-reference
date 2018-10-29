@@ -24,7 +24,9 @@ GUID=b1b3
 
 preparing *ansible bastion host*  
 ```bash
-yum install -a \  
+yum install wget git net-tools bind-utils yum-utils \  
+iptables-services bridge-utils bash-completion \  
+kexec-tools sos psacct \  
 ansible-2.6.5-1.el7ae.noarch \ 
 openshift-ansible-playbooks-3.11.16-1.git.0.4ac6f81.el7.noarch \  
 openshift-ansible-docs-3.11.16-1.git.0.4ac6f81.el7.noarch \  
