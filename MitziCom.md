@@ -10,7 +10,7 @@ GUID=b1b3
   
 **Provisioned Environment Hosts**    
     ROLE|HOSTS  
-    -----|------
+    ----|-----  
     Bastion host:| bastion.$GUID.example.opentlc.com, bastion.$GUID.internal  
     NFS server:|support1.$GUID.example.opentlc.com, support1.$GUID.internal  
     Load balancer:| loadbalancer.$GUID.example.opentlc.com, loadbalancer1.$GUID.internal  
