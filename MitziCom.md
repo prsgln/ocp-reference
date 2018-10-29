@@ -20,8 +20,21 @@ GUID=b1b3
     3 OpenShift worker nodes:|node{1-2}.$GUID.example.opentlc.com, node{1-2}.$GUID.internal  
     IPA Server:|ipa.shared.example.opentlc.com (shared resource for all students)  
 
-from the ansible *bastion host*
 
+
+preparing *ansible bastion host*  
+```bash
+yum install -a \  
+ansible-2.6.5-1.el7ae.noarch \ 
+openshift-ansible-playbooks-3.11.16-1.git.0.4ac6f81.el7.noarch \  
+openshift-ansible-docs-3.11.16-1.git.0.4ac6f81.el7.noarch \  
+openshift-ansible-3.11.16-1.git.0.4ac6f81.el7.noarch \  
+openshift-ansible-roles-3.11.16-1.git.0.4ac6f81.el7.noarch \  
+atomic-openshift-clients-3.11.16-1.git.0.b48b8f8.el7.x86_64 \  
+atomic-openshift-3.11.16-1.git.0.b48b8f8.el7.x86_64   
+```
+
+from the ansible *bastion host*
 ```bash
 sudo -i
 ansible all --list-hosts
@@ -32,11 +45,17 @@ ansible all -m shell -a 'echo GUID=$GUID'
 create ansible hostfile usually under /etc/ansible/hosts
 
 
-Install Docker/Verify Installation  
-from bastion  
+Install/Verify Docker Installation from bastion and assess configured repo  
 ```bash
 ansible nodes -m shell -a 'rpm -V docker-1.13.1'
 ansible nodes -m shell -a 'docker --version'
+ansible all  -m shell -a"yum repolist" 
+ansible  localhost -m shell -a"yum repolist" 
+```
+
+Verify NFS export 
+```bash
+ansible nfs -m shell -a"exportfs"
 ```
 
 
