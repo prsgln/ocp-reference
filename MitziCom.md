@@ -3,11 +3,11 @@ MitziCom
 
 provision the environment via OPENTLC lab portal 
 
- '''
+ ```
    Services → Catalogs → All Services → OPENTLC OpenShift Labs → OpenShift HA Lab
- '''
-GUID=b1b3
-
+ ```
+GUID=b1b3  
+  
 Provisioned Environment Hosts
     Bastion host: || bastion.$GUID.example.opentlc.com, bastion.$GUID.internal  
     NFS server: ||  support1.$GUID.example.opentlc.com, support1.$GUID.internal  
