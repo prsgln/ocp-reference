@@ -59,7 +59,11 @@ Verify NFS export
 ```bash
 ansible nfs -m shell -a"exportfs"
 ```
-
+Verify Prerequisites & Install
+```bash
+ ansible-playbook -i mitzicom_ansible_hosts -f 20 /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml
+  nsible-playbook -i mitzicom_ansible_hosts -f 20 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
+```
 
 
 
