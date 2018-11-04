@@ -22,8 +22,8 @@
 ```
 ## Installing
   ```bash
-  ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml   
-  ansible-playbook -i /root/my_hosts /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
+  ansible-playbook -i /root/my_hosts -f 10 /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml   
+  ansible-playbook -i /root/my_hosts -f 10 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
  ```
 ## Un-Installing
 ```bash
