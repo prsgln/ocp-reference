@@ -26,8 +26,8 @@
   ansible-playbook -i /root/my_hosts -f 10 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
  ```
 Primary configuration files are deployed in   
-  *master* &mdash;  `/etc/origin/master/master-config.yaml`
-  *node*   &mdash;  `/etc/origin/node/node-config.yaml`
+  *master* &mdash;  `/etc/origin/master/master-config.yaml`  
+  *node*   &mdash;  `/etc/origin/node/node-config.yaml`  
 
 ## Un-Installing
 ```bash
