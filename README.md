@@ -21,13 +21,22 @@
  yum install atomic-openshift-utils <- it provides ansible playbooks   
 ```
 ## Installing
-  ```bash
+```bash
   ansible-playbook -i /root/my_hosts -f 10 /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml   
   ansible-playbook -i /root/my_hosts -f 10 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
- ```
+```
 Primary configuration files are deployed in  **/etc/origin/...**   
   *master* &mdash;  `/etc/origin/master/master-config.yaml`  
   *node*   &mdash;  `/etc/origin/node/node-config.yaml`  
+
+## Ansible others
+```bash
+  ansible masters[0] -b -m fetch -a "src=/root/.kube/config dest=/root/.kube/config flat=yes"  <- so to run from bastion oc command as system:admin    
+```
+## Accessing Online   
+ *console* &mdash; `https://loadbalancer1.b1b3.example.opentlc.com`  
+ *registry (docker)* &mdash; `https://docker-registry-default.apps.b1b3.example.opentlc.com`
+ *registry (rhel)  * &mdash; `https://registry-console-default.apps.b1b3.example.opentlc.com`  
 
 ## Un-Installing
 ```bash
@@ -35,12 +44,6 @@ Primary configuration files are deployed in  **/etc/origin/...**
   ansible nodes -a "rm -rf /etc/origin"  
   ansible nfs -a "rm -rf /srv/nfs/<dirs>" <- specify the dirs like monitorings,loggings etc etc   
   ansible all -m ping  
-```
-
-## Ansible others
-```bash
-  ansible nfs -a "rm -rf /srv/nfs/*"  
-  ansible masters[0] -b -m fetch -a "src=/root/.kube/config dest=/root/.kube/config flat=yes"  <- so to run from bastion oc command as system:admin    
 ```
   
 ## Journald Logs
