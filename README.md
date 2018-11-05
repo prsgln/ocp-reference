@@ -35,8 +35,8 @@ Primary configuration files are deployed in  **/etc/origin/...**
 ```
 ## Accessing Online   
  *console* &mdash; `https://loadbalancer1.b1b3.example.opentlc.com`  
- *registry (docker)* &mdash; `https://docker-registry-default.apps.b1b3.example.opentlc.com`
- *registry (rhel)  * &mdash; `https://registry-console-default.apps.b1b3.example.opentlc.com`  
+ *registry (docker)* &mdash; `https://docker-registry-default.apps.b1b3.example.opentlc.com`  
+ *registry (rhel)  * &mdash; `https://registry-console-default.apps.b1b3.example.opentlc.com`    
 
 ## Un-Installing
 ```bash
