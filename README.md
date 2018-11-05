@@ -45,7 +45,13 @@ Primary configuration files are deployed in  **/etc/origin/...**
   ansible nfs -a "rm -rf /srv/nfs/<dirs>" <- specify the dirs like monitorings,loggings etc etc   
   ansible all -m ping  
 ```
-  
+
+## Manage user in htpasswd  
+```bash
+   htpasswd htpasswd.openshift pari
+   ansible masters -m copy -a "src=/root/htpasswd.openshift dest=/etc/origin/master/htpasswd remote_src=False"  
+```
+ 
 ## Journald Logs
  journalctl --since "1 hour ago"     
  journalctl -f  #it means follow   
