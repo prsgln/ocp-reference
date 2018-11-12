@@ -65,14 +65,13 @@ Verify Prerequisites & Install
   nsible-playbook -i mitzicom_ansible_hosts -f 20 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
 ```
 
-
-
-
-
-
-
-
-
-
-
+###Appendix 1  
+Changing network plugin  
+```bash
+  ansible masters -m shell -a "sed -i -e 's/openshift-ovs-subnet/openshift-ovs-multitenant/g'  /etc/origin/master/master-config.yaml"  
+  ansible nodes -m shell -a "sed -i -e 's/openshift-ovs-subnet/openshift-ovs-multitenant/g'  /etc/origin/node/node-config.yaml"  
+  ansible nodes -m shell -a "grep subnet  /etc/origin/node/node-config.yaml"  
+  ansible masters -m shell -a "/usr/local/bin/master-restart api"  
+  ansible masters -m shell -a "/usr/local/bin/master-restart controllers"  
+```
 
