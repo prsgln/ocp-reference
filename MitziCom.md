@@ -77,3 +77,12 @@ Changing network plugin
   ansible masters -m shell -a "/usr/local/bin/master-restart controllers"  
 ```
 
+###Appendix 2  
+NFS Persistent Volume Recycling  
+For persistent volumes with type recycling OpenShift does no longer provide the recycler pod automatically since it is deprecated.   
+This pod however is needed to properly re-use persistent volumes.  The container image still exists with tag latest in the Red Hat registry.   
+It only needs to be pulled to all the nodes and made available for use by tagging the image with the exact version installed (note that the version can change in the future):  
+```bash
+ansible nodes -m shell -a "docker pull registry.access.redhat.com/openshift3/ose-recycler:latest"  
+ansible nodes -m shell -a "docker tag registry.access.redhat.com/openshift3/ose-recycler:latest registry.access.redhat.com/openshift3/ose-recycler:v3.9.14"  
+```
