@@ -49,6 +49,7 @@ create ansible hostfile usually under /etc/ansible/hosts
 
 Install/Verify Docker Installation from bastion and assess configured repo  
 ```bash
+ansible modes -m yum  -a 'name=docker-1.13.1'
 ansible nodes -m shell -a 'rpm -V docker-1.13.1'
 ansible nodes -m shell -a 'docker --version'
 ansible all  -m shell -a"yum repolist" 
