@@ -1,4 +1,4 @@
-#MitziCom 
+# MitziCom 
 
 Choose OpenShift Platform 3.11  
 
@@ -66,7 +66,7 @@ Verify Prerequisites & Install
  ansible-playbook -i mitzicom_ansible_hosts -f 20 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml 
 ```
 
-###Appendix 1  
+### Appendix 1  
 Changing network plugin  
 ```bash
   ansible masters -m shell -a "sed -i -e 's/openshift-ovs-subnet/openshift-ovs-multitenant/g'  /etc/origin/master/master-config.yaml"  
@@ -76,7 +76,7 @@ Changing network plugin
   ansible masters -m shell -a "/usr/local/bin/master-restart controllers"  
 ```
 
-###Appendix 2  
+### Appendix 2  
 NFS Persistent Volume Recycling  
 For persistent volumes with type recycling OpenShift does no longer provide the recycler pod automatically since it is deprecated.   
 This pod however is needed to properly re-use persistent volumes.  The container image still exists with tag latest in the Red Hat registry.   
