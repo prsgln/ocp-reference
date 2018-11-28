@@ -1,5 +1,4 @@
-
-MitziCom 
+#MitziCom 
 
 Choose OpenShift Platform 3.11  
 
