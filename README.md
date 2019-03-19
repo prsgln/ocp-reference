@@ -61,6 +61,16 @@ Primary configuration files are deployed in  **/etc/origin/...**
    ansible nfs -m shell -a"exportfs"  
    ansible masters[0] -b -m fetch -a "src=/root/.kube/config dest=/root/.kube/config flat=yes"  
 ```
+
+## Mischellaneous OC
+
+```bash
+  oc get dc/mongodb --show-labels  
+  oc get all --selector app=nodejs-mongo-persistent   
+  oc get pod --selector app=nodejs-mongo-persistent  
+  oc get rc --selector app=nodejs-mongo-persistent  
+```
+
  
 ## Journald Logs
  journalctl --since "1 hour ago"     
