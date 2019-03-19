@@ -59,6 +59,7 @@ Primary configuration files are deployed in  **/etc/origin/...**
    ansible all -m shell -a"yum repolist"  
    ansible nodes -m shell -a"systemctl status docker | grep Active"  
    ansible nfs -m shell -a"exportfs"  
+   ansible masters[0] -b -m fetch -a "src=/root/.kube/config dest=/root/.kube/config flat=yes"  
 ```
  
 ## Journald Logs
