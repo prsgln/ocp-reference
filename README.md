@@ -18,7 +18,7 @@
 ## Prepare Ansible
  see Preparing the hosts prerequisites https://docs.openshift.com/container-platform/3.10/install/host_preparation.html   
 ```bash  
- yum install atomic-openshift-utils <- it provides ansible playbooks   
+ yum -y install atomic-openshift-clients openshift-ansible <- it provides ansible playbooks   
 ```
 ## Installing
 ```bash
@@ -50,6 +50,15 @@ Primary configuration files are deployed in  **/etc/origin/...**
 ```bash
    htpasswd htpasswd.openshift pari
    ansible masters -m copy -a "src=/root/htpasswd.openshift dest=/etc/origin/master/htpasswd remote_src=False"  
+```
+
+## Mishellaneous Ansible
+```bash  
+   ansible -i inventory_3.11.51 all -m ping
+   ansible -i inventory_3.11.51 masters,nodes  --list-hosts  
+   ansible all -m shell -a"yum repolist"  
+   ansible nodes -m shell -a"systemctl status docker | grep Active"  
+   ansible nfs -m shell -a"exportfs"  
 ```
  
 ## Journald Logs
