@@ -1,4 +1,11 @@
 # THIS is the post-installation configuration for NFS
+ On Bastion
+
+```bash
+ ansible masters[0] -b -m fetch -a "src=/root/.kube/config dest=/root/.kube/config flat=yes"
+```
+
+
  On NFS server   
 ```bash
   mkdir -p /srv/nfs/user-vols/pv{1..200}  
